@@ -1,0 +1,22 @@
+{
+  "name": "file-reader",
+  "version": "1.0.0",
+  "description": "Electron app",
+  "main": "app.js",
+  "scripts": {
+    "test": "none"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zero-1729/file-reader.git"
+  },
+  "author": "Zero-1729",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Zero-1729/file-reader/issues"
+  },
+  "homepage": "https://github.com/Zero-1729/file-reader#readme",
+  "dependencies": {
+    "electron": "^1.7.5"
+  }
+}
