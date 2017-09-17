@@ -2,9 +2,9 @@
 
 ---
 
-An Example Electron App that Reads Files
-
 ![Screnshot](screenshot.png)
+
+An Example Electron App that Reads Files
 
 ## Features:
 + Minimal Interface
