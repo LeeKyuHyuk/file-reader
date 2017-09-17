@@ -1,0 +1,80 @@
+html, body {
+    color: #f5f5f5f5;
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+}
+
+h1 {
+    color: white;
+    cursor: default;
+}
+
+header {
+    top: 0;
+    width: 100%;
+    background: #192024;
+    z-index: 1
+}
+
+.input-toggle {
+    cursor: pointer;
+}
+
+.btn {
+    font-size: 16px;
+    border-radius: 20px;
+    width: 120px;
+    height: 30px;
+    outline: none;
+    border: none;
+    background: dodgerblue;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn:active {
+    opacity: .85;
+}
+
+.sticky {
+    top: 0;
+    position: absolute;
+    height: 80px;
+}
+
+.top-name {
+    float: left;
+    padding-left: 12px;
+}
+
+.top-container {
+    float: right;
+    padding-top: 24px;
+    padding-right: 26px;
+}
+
+#main-pane {
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    background: #192030;
+}
+
+#file-content {
+    margin-top: 80px;
+    padding: 10px;
+}
+
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+::-webkit-scrollbar:hover {
+    width: 0;
+}

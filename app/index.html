@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>File Reader</title>
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="src/css/main.css">
+    </head>
+
+    <body>
+        <header class="sticky">
+            <div class="top-name">
+                <h1>Current File</h1>
+            </div>
+
+            <div class="top-container">
+                <button id="select-directory" class="btn">Open</button>
+            </div>
+
+            <div class="top-container">
+                <div id="label"></div>
+            </div>
+
+        </header>
+
+        <div id="main-pane">
+            <div id="file-content"></div>
+        </div>
+
+        <script type="text/javascript" src="src/api/openFile.js"></script>
+    </body>
+</html>
