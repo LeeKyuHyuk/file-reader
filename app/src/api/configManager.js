@@ -30,7 +30,7 @@ class ConfigManager {
 
     getDefaultConfig() {
         return {
-            useNativeFrame: true
+            useNativeFrame: true,
             bounds: {
                 width: 1080,
                 height: 720,

@@ -6,12 +6,12 @@ const os              = require("os");
 
 const rootPath = path.join(__dirname); // root Path
 
-const BrowserWindow   = electron.BrowserWindow; // Module to control native Browser Window
-const nativeImage     = electron.nativeImage;     // Module to control native Image
-const app             = electron.app;                     // Module to control app's life
+const powerSaveBlocker  = electron.powerSaveBlocker; // To enable save blocker
+const BrowserWindow     = electron.BrowserWindow; // Module to control native Browser Window
+const nativeImage       = electron.nativeImage;     // Module to control native Image
+const app               = electron.app;                     // Module to control app's life
 
 const ConfigManager = require(path.join(rootPath, "/app/src/api/configManager"));
-const PowerMonitor  = require(path.join(rootPath, "/app/src/api/PowerMonitor"));
 
 // Global reference of window object,
 // To avaoid window being closed automatically when Js object is GCed.
@@ -86,8 +86,8 @@ app.on('ready', function() {
         mainWindow = null;
     });
 
-    const powerMonitor = new PowerMonitor();
-    powerMonitor.enable();
+    // Activate sleep blocker
+    powerSaveBlocker.start('prevent-display-sleep');
 
 })
 
