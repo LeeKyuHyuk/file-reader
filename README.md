@@ -4,6 +4,8 @@
 
 An Example Electron App that Reads Files
 
+![Screnshot](screenshot.png)
+
 ## Features:
 + Minimal Interface
 + Sleep Blocker
