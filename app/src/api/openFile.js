@@ -39,7 +39,6 @@ btn.onclick = function () {
             label.style.padding = "8px";
             label.style.borderRadius = "4px";
             label.style.display = "inline-block";
-            label.style.fontWeight = "bold";
             label.style.marginLeft = "0.5rem";
             label.style.verticalAlign = "middle";
             label.style.backgroundColor = "green";
@@ -51,7 +50,7 @@ btn.onclick = function () {
                 document.getElementById('file-content').innerText = data;
 
                 // style for file content
-                document.getElementById('file-content').style.color = "white";
+                document.getElementById('file-content').style.color = "#f5f5f5";
             });
         })
 };
