@@ -1,6 +1,7 @@
 process.env.NODE_ENV = 'production'; // To increase performance
 
 const electron        = require("electron");
+const notif           = require("node-notifier");
 const path            = require('path');
 const os              = require("os");
 
@@ -43,9 +44,7 @@ app.on('window-all-closed', () => {
 // initialization and ready for creating browser window
 app.on('ready', function() {
 
-    if (os.platform() !== "linux") {
-        createToast();
-    };
+    createToast();
 
     const configManager          = new ConfigManager(app);
     const useNativeFrame         = configManager.getConfig().useNativeFrame;
@@ -61,7 +60,6 @@ app.on('ready', function() {
         height                  :  bounds.height,
         minWidth                :  1000,
         minHeight               :  600,
-        titleBarStyle           :  'hidden',
         backgroundColor         :  '#192033',
         scrollBounce            :  true,
         show                    :  false,
@@ -118,10 +116,13 @@ function checkBounds(bounds) {
 }
 
 // Create Toast Notification
-function createToast() {
-    Notification("File Reader", {
-        body: "File Reader is ready!",
-        }, () => {
-            console.log('Notification was clicked!')
-        })
+var createToast = () => {
+    var options = {
+        'title': 'File Reader',
+        'message': 'App is ready!',
+        'sound': 'bottle',
+        timeout: 2
+    };
+
+    notif.notify(options);
 }
